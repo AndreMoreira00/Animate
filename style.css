@@ -34,6 +34,16 @@ body{
   text-align: center; 
   /* box-shadow: 0px 12px 40px rgba(255, 255, 255, 0.583); */
 }
+.section_h3{
+  padding-top: 10px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(4, 10, 32, 0.854);
+  color: rgb(255, 255, 255);
+  font-family: var(--fontTitle1);
+  text-align: center; 
+  /* box-shadow: 0px 12px 40px rgba(255, 255, 255, 0.583); */
+}
 #h1_animation{
   /* position: relative;
   top: 50%;
@@ -75,7 +85,6 @@ body{
   background: black;
   border-radius: 0%;
   transition-duration: 2s;
-
 }
 
 .square:hover{
@@ -120,5 +129,70 @@ body{
   to {
     transform: translateY(-150%);
     transition: transform 1s;
+  }
+}
+
+.circle{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: black;
+  display: block;
+  margin: 130px auto;
+  animation: infinite ;
+  animation-name: girar, planeta_1;
+  animation-duration: 6s;
+  border: 3px solid rgb(237, 61, 7);
+}
+.planeta{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 90%;
+  left: 0%;
+  border-radius: 50%;
+  background-color: brown;
+  display: block;
+  margin: auto;
+  margin-top: 80px;
+  animation: infinite;
+  animation-name: planeta_1;
+  animation-duration: 2s;
+}
+/* Mudar o ponto fixo central da bola. Como? */
+@keyframes planeta_1 {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+   transform: rotate(360deg);
+  }
+}
+@keyframes girar{
+  from{
+    /* transform: rotate(0deg); */
+    box-shadow: -10px 20px 120px rgba(237, 61, 7, 0.698);
+    /* width: 300px;
+    height: 300px; */
+    /* transition: width 1s, height 1s; */
+  }
+  to {
+    /* transform: rotate(-360deg); */
+    box-shadow: -10px -20px 50px rgba(237, 61, 7, 0.698);
+    /* width: 305px;
+    height: 305px; */
+    /* transition: width 1s, height 1s; */
+  }
+  to{
+    box-shadow: 20px -10px 120px rgba(237, 61, 7, 0.698);
+    /* width: 310px; */
+    /* height: 310px; */
+    /* transition: width 1s, height 1s; */
+  }
+  to{
+    box-shadow: -20px 10px 50px rgba(237, 61, 7, 0.698);
+    /* width: 305px;
+    height: 305px; */
+    /* transition: width 1s, height 1s; */
   }
 }
